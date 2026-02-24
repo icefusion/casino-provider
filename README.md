@@ -66,17 +66,34 @@ docker-compose.yml
 ### Casino (.env.casino)
 
 ```
+PORT=3000
 DATABASE_URL=postgres://casino:casino@localhost:5432/casino
-CASINO_SECRET=casino-secret
+CASINO_SECRET=c266cb7b0e4fe128dcac640fa96f199dbba0d98799a244dda599a7fa5220bdd8b
+PROVIDER_SECRET=605a942fe159421b679c262957645c80dcdd21c9f9486075a4d079757078bd79
 PROVIDER_BASE_URL=http://localhost:3002
 ```
 
 ### Provider (.env.provider)
 
 ```
+PORT=3002
 DATABASE_URL=postgres://casino:casino@localhost:5432/casino
-PROVIDER_SECRET=provider-secret
+CASINO_SECRET=c266cb7b0e4fe128dcac640fa96f199dbba0d98799a244dda599a7fa5220bdd8b
+PROVIDER_SECRET=605a942fe159421b679c262957645c80dcdd21c9f9486075a4d079757078bd79
 CASINO_BASE_URL=http://localhost:3000
+```
+
+### Demo (.env.demo)
+
+```
+CASINO_BASE_URL=http://localhost:3000
+CASINO_SECRET=c266cb7b0e4fe128dcac640fa96f199dbba0d98799a244dda599a7fa5220bdd8b
+PROVIDER_SECRET=605a942fe159421b679c262957645c80dcdd21c9f9486075a4d079757078bd79
+DEMO_USERNAME=will@casino.local
+DEMO_PROVIDER_CODE=ACME_PROVIDER
+DEMO_GAME_CODE=SLOTS_1
+DEMO_BET_AMOUNT=10
+DEMO_WIN_AMOUNT=15
 ```
 
 ---
