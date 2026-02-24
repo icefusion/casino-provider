@@ -25,11 +25,13 @@ function cfg(): SeedConfig {
     providerName: process.env.SEED_PROVIDER_NAME ?? 'Acme Provider',
     providerBaseUrl:
       process.env.SEED_PROVIDER_BASE_URL ?? 'http://localhost:3002',
-    providerSecret: process.env.SEED_PROVIDER_SECRET ?? 'dev-secret',
+    providerSecret:
+      process.env.SEED_PROVIDER_SECRET ??
+      '605a942fe159421b679c262957645c80dcdd21c9f9486075a4d079757078bd79',
 
     casinoUsername: process.env.SEED_CASINO_USERNAME ?? 'will@casino.local',
     currency: process.env.SEED_CURRENCY ?? 'BRL',
-    initialBalance: process.env.SEED_INITIAL_BALANCE ?? '100000', // R$ 1000,00 em centavos
+    initialBalance: process.env.SEED_INITIAL_BALANCE ?? '100000',
 
     casinoGameCode: process.env.SEED_CASINO_GAME_CODE ?? 'SLOTS_1',
     casinoGameName: process.env.SEED_CASINO_GAME_NAME ?? 'Slots Demo',
@@ -72,7 +74,7 @@ async function main() {
     );
     const casinoProviderIdFinal: string = casinoProviderRow[0]?.id;
     if (!casinoProviderIdFinal)
-      throw new Error('Falha criando/obtendo CASINO_GAME_PROVIDERS');
+      throw new Error('Fail to Create / Update CASINO_GAME_PROVIDERS');
 
     console.log('[SEED] CASINO_GAME_PROVIDERS ok:', casinoProviderIdFinal);
 
@@ -95,7 +97,7 @@ async function main() {
     );
     const casinoGameIdFinal: string = casinoGameRow[0]?.id;
     if (!casinoGameIdFinal)
-      throw new Error('Falha criando/obtendo CASINO_GAMES');
+      throw new Error('Fail to Create / Update CASINO_GAMES');
 
     console.log('[SEED] CASINO_GAMES ok:', casinoGameIdFinal);
 
@@ -118,7 +120,7 @@ async function main() {
     );
     const casinoUserIdFinal: string = casinoUserRow[0]?.id;
     if (!casinoUserIdFinal)
-      throw new Error('Falha criando/obtendo CASINO_USERS');
+      throw new Error('Fail to Create / Update CASINO_USERS');
 
     console.log('[SEED] CASINO_USERS ok:', casinoUserIdFinal);
 
@@ -162,7 +164,7 @@ async function main() {
     );
     const providerGameIdFinal: string = providerGameRow[0]?.id;
     if (!providerGameIdFinal)
-      throw new Error('Falha criando/obtendo PROVIDER_GAMES');
+      throw new Error('Fail to Create / Update PROVIDER_GAMES');
 
     console.log('[SEED] PROVIDER_GAMES ok:', providerGameIdFinal);
 
@@ -185,7 +187,7 @@ async function main() {
     );
     const providerCustomerIdFinal: string = providerCustomerRow[0]?.id;
     if (!providerCustomerIdFinal)
-      throw new Error('Falha criando/obtendo PROVIDER_CUSTOMERS');
+      throw new Error('Fail to Create / Update PROVIDER_CUSTOMERS');
 
     console.log('[SEED] PROVIDER_CUSTOMERS ok:', providerCustomerIdFinal);
 
