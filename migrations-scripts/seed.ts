@@ -74,7 +74,7 @@ async function main() {
     );
     const casinoProviderIdFinal: string = casinoProviderRow[0]?.id;
     if (!casinoProviderIdFinal)
-      throw new Error('Fail to Create / Update CASINO_GAME_PROVIDERS');
+      throw new Error('Fail to Create / Get CASINO_GAME_PROVIDERS');
 
     console.log('[SEED] CASINO_GAME_PROVIDERS ok:', casinoProviderIdFinal);
 
@@ -97,7 +97,7 @@ async function main() {
     );
     const casinoGameIdFinal: string = casinoGameRow[0]?.id;
     if (!casinoGameIdFinal)
-      throw new Error('Fail to Create / Update CASINO_GAMES');
+      throw new Error('Fail to Create / Get CASINO_GAMES');
 
     console.log('[SEED] CASINO_GAMES ok:', casinoGameIdFinal);
 
@@ -120,7 +120,7 @@ async function main() {
     );
     const casinoUserIdFinal: string = casinoUserRow[0]?.id;
     if (!casinoUserIdFinal)
-      throw new Error('Fail to Create / Update CASINO_USERS');
+      throw new Error('Fail to Create / Get CASINO_USERS');
 
     console.log('[SEED] CASINO_USERS ok:', casinoUserIdFinal);
 
@@ -164,7 +164,7 @@ async function main() {
     );
     const providerGameIdFinal: string = providerGameRow[0]?.id;
     if (!providerGameIdFinal)
-      throw new Error('Fail to Create / Update PROVIDER_GAMES');
+      throw new Error('Fail to Create / Get PROVIDER_GAMES');
 
     console.log('[SEED] PROVIDER_GAMES ok:', providerGameIdFinal);
 
@@ -187,7 +187,7 @@ async function main() {
     );
     const providerCustomerIdFinal: string = providerCustomerRow[0]?.id;
     if (!providerCustomerIdFinal)
-      throw new Error('Fail to Create / Update PROVIDER_CUSTOMERS');
+      throw new Error('Fail to Create / Get PROVIDER_CUSTOMERS');
 
     console.log('[SEED] PROVIDER_CUSTOMERS ok:', providerCustomerIdFinal);
 
