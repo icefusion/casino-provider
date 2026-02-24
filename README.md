@@ -146,7 +146,7 @@ npx dotenv -e .env.provider -- npm run start:dev provider
 
 Provider will be available at:
 ```
-http://localhost:3001
+http://localhost:3002
 ```
 
 ---
