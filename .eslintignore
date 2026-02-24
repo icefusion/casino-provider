@@ -1,0 +1,2 @@
+typeorm.datasource.cjs
+migrations/*.ts
