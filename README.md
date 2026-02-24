@@ -196,11 +196,11 @@ http://localhost:3000
 curl -X POST http://localhost:3000/casino/simulateRound \
   -H "Content-Type: application/json" \
   -d '{
-    "username": "player1",
-    "providerCode": "demo-provider",
-    "gameCode": "demo-game",
-    "betAmount": "100",
-    "winAmount": "200"
+    "username": "will@casino.local",
+    "providerCode": "ACME_PROVIDER",
+    "gameCode": "SLOTS_1",
+    "betAmount": 100,
+    "winAmount": 200
   }'
 ```
 
